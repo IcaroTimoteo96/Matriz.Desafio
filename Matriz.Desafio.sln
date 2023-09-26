@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matriz.Desafio", "Matriz.Desafio\Matriz.Desafio.csproj", "{C193C2BD-BB60-48A3-A63C-EA1D2C62212D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrizTestes", "MatrizTestes\MatrizTestes.csproj", "{CED9CD04-52F8-434D-9EAD-54E58B2489E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C193C2BD-BB60-48A3-A63C-EA1D2C62212D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C193C2BD-BB60-48A3-A63C-EA1D2C62212D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C193C2BD-BB60-48A3-A63C-EA1D2C62212D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C193C2BD-BB60-48A3-A63C-EA1D2C62212D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED9CD04-52F8-434D-9EAD-54E58B2489E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED9CD04-52F8-434D-9EAD-54E58B2489E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED9CD04-52F8-434D-9EAD-54E58B2489E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED9CD04-52F8-434D-9EAD-54E58B2489E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21D69438-1C2F-4292-B387-737E7C824EA8}
+	EndGlobalSection
+EndGlobal
