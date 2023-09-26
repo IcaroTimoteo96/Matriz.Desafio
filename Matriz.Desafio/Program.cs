@@ -3,9 +3,6 @@
 int linhas = 0;
 int colunas = 0;
 
-int _col = 0;
-int _li = 0;
-
 int primeira_coluna = 0;
 int primeira_linha = 0;
 
@@ -19,7 +16,7 @@ string[,] matriz = new string[7, 7] {
 
                 { "1", "1", "1", "2", "4", "1", "5" }, //2
 
-                { "1", "2", "2", "5", "2", "1", "4" }, //3
+                { "1", "5", "5", "5", "5", "5", "5" }, //3
 
                 { "1", "4", "4", "4", "1", "5", "3" }, //4
 
@@ -90,7 +87,7 @@ void SubstituirValoresHorizontal(int linha, int coluna)
     int aux_contador = 0;
 
 
-    if (coluna < 6 && (matriz[aux_linha, aux_coluna] == matriz[aux_linha, aux_coluna + 1]))
+    if (coluna < 6 && (matriz[aux_linha, aux_coluna] == matriz[aux_linha, aux_coluna + 1]) && contador < 4)
     {
         contador++;
         SubstituirValoresHorizontal(aux_linha, aux_coluna + 1);
@@ -171,11 +168,11 @@ void TrocaPorCaractereVertical(int aux_l, int aux_col, string caractere, int pri
 }
 
 
-for (linhas = 0; linhas <= 6; linhas++)
+for (int li = 0; li <= 6; li++)
 {
-    for (colunas = 0; colunas < 6; colunas++)
+    for (int col = 0; col <= 6; col++)
     {
-        Console.Write("{0}, ", matriz[linhas, colunas]);
+        Console.Write("{0} ", matriz[li, col]);
     }
     Console.WriteLine("\n");
 }
