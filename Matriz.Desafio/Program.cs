@@ -10,19 +10,19 @@ string[,] matriz = new string[7, 7] {
 
                 /*0,   1,   2,   3,   4,   5,   6*/
 
-                { "1", "1", "1", "2", "4", "6", "1" }, //0
+                { "1", "5", "3", "2", "1", "3", "1" }, //0
 
-                { "1", "6", "2", "2", "2", "2", "2" }, //1
+                { "2", "2", "3", "5", "6", "1", "4" }, //1
 
-                { "1", "1", "1", "2", "4", "1", "5" }, //2
+                { "3", "4", "1", "1", "1", "1", "1" }, //2
 
-                { "1", "5", "5", "5", "5", "5", "5" }, //3
+                { "6", "5", "4", "3", "1", "4", "2" }, //3
 
-                { "1", "4", "4", "4", "1", "5", "3" }, //4
+                { "5", "5", "1", "5", "7", "4", "1" }, //4
 
-                { "1", "4", "1", "4", "1", "6", "2" }, //5
+                { "4", "5", "5", "6", "4", "4", "2" }, //5
 
-                { "1", "4", "5", "5", "5", "6", "2" } //6
+                { "2", "1", "3", "3", "3", "4", "5" } //6
 
             };
 
@@ -39,7 +39,7 @@ void CompararValoresHorizontal(string m1, string m2)
     if (m1 == m2)
     {
         primeira_coluna = colunas;
-        SubstituirValoresHorizontal(linhas, colunas);
+        SubstituirValoresNaHorizontal(linhas, colunas);
     }
 
     //Se colunas igual a 5 ou 6, então foi percorrido todas as colunas da matriz.
@@ -62,7 +62,7 @@ void CompararValoresVertical(string m1, string m2)
     if (m1 == m2)
     {
         primeira_linha = linhas;
-        SubstituirValoresVertical(linhas, colunas);
+        SubstituirValoresNaVertical(linhas, colunas);
     }
 
     //Se linhas igual a 5 ou 6, então foi percorrido todas as linhas da matriz.
@@ -80,7 +80,7 @@ void CompararValoresVertical(string m1, string m2)
         CompararValoresVertical(matriz[linhas, colunas], matriz[linhas + 1, colunas]);
 }
 
-void SubstituirValoresHorizontal(int linha, int coluna)
+void SubstituirValoresNaHorizontal(int linha, int coluna)
 {
     int aux_linha = linha;
     int aux_coluna = coluna;
@@ -90,7 +90,7 @@ void SubstituirValoresHorizontal(int linha, int coluna)
     if (coluna < 6 && (matriz[aux_linha, aux_coluna] == matriz[aux_linha, aux_coluna + 1]) && contador < 4)
     {
         contador++;
-        SubstituirValoresHorizontal(aux_linha, aux_coluna + 1);
+        SubstituirValoresNaHorizontal(aux_linha, aux_coluna + 1);
     }
     else
     {
@@ -115,7 +115,7 @@ void SubstituirValoresHorizontal(int linha, int coluna)
     }
 };
 
-void SubstituirValoresVertical(int linha, int coluna)
+void SubstituirValoresNaVertical(int linha, int coluna)
 {
     int aux_linha = linha;
     int aux_coluna = coluna;
@@ -124,7 +124,7 @@ void SubstituirValoresVertical(int linha, int coluna)
     if (linha < 6 && (matriz[aux_linha, aux_coluna] == matriz[aux_linha + 1, aux_coluna]) && contador < 4)
     {
         contador++;
-        SubstituirValoresVertical(aux_linha + 1, aux_coluna);
+        SubstituirValoresNaVertical(aux_linha + 1, aux_coluna);
     }
     else
     {
